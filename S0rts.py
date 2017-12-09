@@ -21,7 +21,23 @@ class Sorts:
                     self.swap(i,j)
                     i = i-1
                 j= j-1
-
+      """
+    Selection Sort Function
+    Complexity: O(N)2
+    In Place Algorithm
+    Stable Algorithm
+    """
+    def selection_sort(self):
+        for i in range(len(self.array)):
+            curr_min = self.array[i]
+            curr_in = i
+            j = i+1
+            while j< len(self.array):
+                if curr_min> self.array[j]:
+                    curr_in = j
+                    curr_min =self.array[j]
+                j=j+1
+            self.swap(curr_in,i)
     def outting(self):
         print(self.array)
 
